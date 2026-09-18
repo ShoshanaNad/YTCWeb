@@ -1,0 +1,214 @@
+@import url("https://necolas.github.io/normalize.css/latest/normalize.css");
+
+a:link,
+a:visited {
+  color: rgb(68, 32, 17);
+  text-shadow: -2px -2px 0 mintcream, 2px -2px 0 mintcream, -2px 2px 0 mintcream, 2px 2px 0 mintcream;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+a:hover {
+  color: black;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='50%' font-size='24'>🌿</text></svg>") 16 16, auto;
+}
+
+html,
+body {
+  /* background-color: rgb(164, 237, 193); */
+  background-image: linear-gradient(to bottom, rgb(164, 237, 193) 50%, mintcream 100%);
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: rgb(165, 148, 53);
+  text-shadow: -4px -1px 0 mintcream, 4px -2px 0 mintcream, -4px 2px 0 mintcream, 4px 2px 0 mintcream;
+  font-size: 5em;
+  font-family: Fleur De Leah;
+
+}
+
+h2 {
+  color: rgb(188, 65, 145);
+  text-decoration: 2.2px underline;
+  font-size: 2em;
+}
+
+h3 {
+  color: rgb(165, 148, 53);
+  text-shadow: -2px -2px 0 mintcream;
+}
+
+header {
+  text-align: center;
+}
+
+img:not(.imgaboutus) {
+  height: auto;
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  scale: 1.7;
+}
+
+.imagestuff img {
+  display: inline-block;
+  margin-right: 70px;
+  vertical-align: top;
+  margin-top: 135px;
+  padding-left: 92px;
+  width: 200px;
+  scale: 1.67;
+}
+
+/* .imagestuff */
+img:hover:not(.imgaboutus) {
+  scale: 2.5 2.5;
+  z-index: 1;
+  position: relative;
+}
+
+body img {
+  box-sizing: border-box;
+}
+
+
+p {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+p img {
+  box-shadow: 3px 3px 3px rgb(188, 65, 145);
+  translate: -89px;
+}
+
+button {
+  max-width: fit-content;
+  min-width: 8rem;
+  height: 10em;
+  border-radius: 99px;
+  color: hsla(150, 100%, 98%, 0.75);
+  background-color: #BC4191;
+}
+
+.about-page h1 {
+  color: rgb(188, 65, 145);
+  text-decoration: none;
+  text-shadow: mintcream;
+}
+
+.about-page h2 {
+  color: rgb(188, 170, 65);
+  text-decoration: none;
+  text-shadow: mintcream;
+}
+
+.about-page p {
+  color: rgb(180, 109, 21);
+  line-height: 1.4em;
+}
+
+.menu img {
+  width: 15%;
+  height: auto;
+}
+
+.hplink {
+  border: 3.7px dotted rgb(188, 65, 145);
+  border-radius: 80px;
+  padding: 4px;
+}
+
+.menubttn {
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  max-height: 40px;
+  margin-top: 3%;
+}
+
+#welcome {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+audio {
+  background-color: rgba(192, 169, 41, 0.74);
+  border-radius: 10px;
+  border: 11px ridge rgb(191, 64, 147);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 420px;
+  padding: 10px;
+}
+
+ul {
+  text-align: left;
+  text-transform: capitalize;
+  font-family: 'Franklin Gothic Narrow';
+  letter-spacing: 3.5px;
+  font-weight: Bold;
+  list-style: upper-roman;
+  translate: -3px;
+  line-height: 32px;
+  transform: skew(10deg);
+
+}
+
+.bttn {
+  text-wrap: nowrap;
+  display: inline-block;
+}
+
+#bttop {
+  font-size: 2em;
+  position: fixed;
+  top: 90%;
+  right: 2%;
+  transform: translateY(-50%);
+}
+
+#vid {
+  position: absolute;
+  left: 40%;
+}
+
+img.imageaboutus {
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  scale: 1;
+}
+
+@media(width<=800px) {
+  img {
+    display: block;
+    margin: 40px auto 40px;
+    max-width: 100%;
+  }
+}
+
+@media(width>=800px) {
+  img {
+    display: block;
+    margin: 40px auto 40px;
+    max-width: 100%;
+  }
+
+  body {
+    font-size: 2em;
+  }
+
+  #bttop {
+    font-size: 1em;
+  }
+}
+
+caption {
+  font-size: 1.5em;
+  color: rgb(188, 65, 145);
+  text-shadow: -2px -2px 0 mintcream, 2px -2px 0 mintcream, -2px 2px 0 mintcream, 2px 2px 0 mintcream;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: italic;
+}
