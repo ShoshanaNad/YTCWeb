@@ -1,214 +1,588 @@
 @import url("https://necolas.github.io/normalize.css/latest/normalize.css");
 
+/* ===========================
+   GLOBAL COLORS
+   =========================== */
+:root {
+  --primary: rgb(68, 32, 17);
+  --primary-dark: rgb(50, 24, 12);
+  --accent-gold: rgb(165, 148, 53);
+  --neutral-light: mintcream;
+  --neutral-warm: rgb(240, 236, 230);
+}
+
+/* ===========================
+   LINKS
+   =========================== */
 a:link,
 a:visited {
-  color: rgb(68, 32, 17);
-  text-shadow: -2px -2px 0 mintcream, 2px -2px 0 mintcream, -2px 2px 0 mintcream, 2px 2px 0 mintcream;
+  color: var(--primary);
   text-decoration: none;
   font-size: 1.1em;
+  font-weight: 600;
 }
 
 a:hover {
-  color: black;
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='50%' font-size='24'>🌿</text></svg>") 16 16, auto;
+  color: var(--primary-dark);
 }
 
+/* ===========================
+   BACKGROUND
+   =========================== */
 html,
 body {
-  /* background-color: rgb(164, 237, 193); */
-  background-image: linear-gradient(to bottom, rgb(164, 237, 193) 50%, mintcream 100%);
+  background-image: linear-gradient(to bottom,
+      var(--neutral-warm) 40%,
+      var(--neutral-light) 100%);
   background-repeat: no-repeat;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+/* ===========================
+   HEADINGS
+   =========================== */
 h1 {
-  color: rgb(165, 148, 53);
-  text-shadow: -4px -1px 0 mintcream, 4px -2px 0 mintcream, -4px 2px 0 mintcream, 4px 2px 0 mintcream;
-  font-size: 5em;
+  color: var(--primary);
+  font-size: 4em;
   font-family: Fleur De Leah;
-
+  text-align: center;
 }
 
 h2 {
-  color: rgb(188, 65, 145);
-  text-decoration: 2.2px underline;
+  max-width: 800px;
+  margin: 2rem auto 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 3px solid rgb(68, 32, 17);
+  color: rgb(68, 32, 17);
   font-size: 2em;
 }
 
 h3 {
-  color: rgb(165, 148, 53);
-  text-shadow: -2px -2px 0 mintcream;
+  color: var(--primary);
 }
 
+/* =========================================
+   UNIVERSAL HEADER — IDENTICAL ON ALL PAGES
+   ========================================= */
+
 header {
+  background-color: #5a3e2b;
+  color: white;
+  padding: 25px 20px;
+  border-bottom: 4px solid #3c2a1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Center block for title + tagline */
+.header-center {
   text-align: center;
 }
 
+/* Header title */
+header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  line-height: 1.2;
+}
+
+/* Header tagline */
+.header-tagline {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #f5e9d8;
+}
+
+/* Menu toggle button */
+#menuToggle {
+  background-color: #3c2a1f;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#menuToggle:hover {
+  background-color: #2b1e15;
+}
+
+/* Side menu links */
+#sideMenu a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+}
+
+#sideMenu a:hover {
+  background-color: #3c2a1f;
+}
+
+/* ===========================
+   IMAGES
+   =========================== */
 img:not(.imgaboutus) {
-  height: auto;
   width: 60%;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  scale: 1.7;
+  margin: 2rem auto;
 }
 
 .imagestuff img {
   display: inline-block;
-  margin-right: 70px;
-  vertical-align: top;
-  margin-top: 135px;
-  padding-left: 92px;
+  margin: 2rem 70px;
   width: 200px;
-  scale: 1.67;
 }
 
-/* .imagestuff */
-img:hover:not(.imgaboutus) {
-  scale: 2.5 2.5;
-  z-index: 1;
-  position: relative;
+/* Hover zoom but more subtle */
+img:hover:not(.imgaboutus):not(#bottom-image img) {
+  scale: 1.15;
+  transition: 0.3s ease;
 }
-
-body img {
-  box-sizing: border-box;
-}
-
 
 p {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  max-width: 800px;
+  margin: 1.5rem auto;
+  padding: 1rem 1.4rem;
+  background-color: mintcream;
+  border-left: 6px solid rgb(68, 32, 17);
+  border-radius: 6px;
+  line-height: 1.6em;
+  font-size: 1.1em;
 }
 
-p img {
-  box-shadow: 3px 3px 3px rgb(188, 65, 145);
-  translate: -89px;
-}
-
+/* ===========================
+   BUTTONS
+   =========================== */
 button {
-  max-width: fit-content;
   min-width: 8rem;
-  height: 10em;
-  border-radius: 99px;
-  color: hsla(150, 100%, 98%, 0.75);
-  background-color: #BC4191;
+  height: 3rem;
+  border-radius: 50px;
+  color: var(--neutral-light);
+  background-color: var(--primary);
+  font-weight: bold;
+  border: none;
 }
 
-.about-page h1 {
-  color: rgb(188, 65, 145);
-  text-decoration: none;
-  text-shadow: mintcream;
+/* ===========================
+   ABOUT PAGE
+   =========================== */
+
+.home-page,
+.about-page {
+  font-family: Georgia, serif;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #222;
 }
+
 
 .about-page h2 {
-  color: rgb(188, 170, 65);
-  text-decoration: none;
-  text-shadow: mintcream;
+  color: var(--accent-gold);
 }
 
 .about-page p {
-  color: rgb(180, 109, 21);
-  line-height: 1.4em;
+  color: var(--primary-dark);
+  line-height: 1.5em;
 }
 
-.menu img {
-  width: 15%;
+/* ===========================
+   MAIN IMAGES
+   =========================== */
+/* Full-width bottom image */
+#bottom-image img {
+  width: 100%;
   height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
+/* Centered middle image */
+#middle-image img {
+  width: 80%;
+  max-width: 900px;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 8px;
+}
+
+/* ===========================
+   SPECIAL ELEMENTS
+   =========================== */
 .hplink {
-  border: 3.7px dotted rgb(188, 65, 145);
-  border-radius: 80px;
+  border: 3px solid var(--primary);
+  border-radius: 50px;
   padding: 4px;
-}
-
-.menubttn {
-  font-weight: bolder;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  max-height: 40px;
-  margin-top: 3%;
 }
 
 #welcome {
   text-align: center;
   font-size: 1.5em;
+  color: var(--primary);
 }
 
-audio {
-  background-color: rgba(192, 169, 41, 0.74);
-  border-radius: 10px;
-  border: 11px ridge rgb(191, 64, 147);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 420px;
-  padding: 10px;
-}
+/* ===========================
+   SIDE MENU
+   =========================== */
 
-ul {
-  text-align: left;
-  text-transform: capitalize;
-  font-family: 'Franklin Gothic Narrow';
-  letter-spacing: 3.5px;
-  font-weight: Bold;
-  list-style: upper-roman;
-  translate: -3px;
-  line-height: 32px;
-  transform: skew(10deg);
-
-}
-
-.bttn {
-  text-wrap: nowrap;
-  display: inline-block;
-}
-
-#bttop {
-  font-size: 2em;
+#menuToggle {
   position: fixed;
-  top: 90%;
-  right: 2%;
-  transform: translateY(-50%);
+  top: 20px;
+  left: 20px;
+  background-color: rgb(68, 32, 17);
+  color: mintcream;
+  border: none;
+  padding: 12px 18px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
 }
 
-#vid {
-  position: absolute;
-  left: 40%;
+#sideMenu {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  /* hidden by default */
+  width: 240px;
+  height: 100%;
+  background-color: rgb(68, 32, 17);
+  padding-top: 80px;
+  transition: left 0.35s ease;
+  z-index: 999;
 }
 
-img.imageaboutus {
-
+#sideMenu a {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  scale: 1;
+  padding: 18px 24px;
+  color: mintcream;
+  font-size: 1.2em;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-@media(width<=800px) {
+#sideMenu a:hover {
+  background-color: rgb(50, 24, 12);
+}
+
+/* ===========================
+   MEDIA QUERIES
+   =========================== */
+@media (width <=800px) {
   img {
-    display: block;
-    margin: 40px auto 40px;
     max-width: 100%;
+    margin: 1rem auto;
   }
 }
 
-@media(width>=800px) {
-  img {
-    display: block;
-    margin: 40px auto 40px;
-    max-width: 100%;
-  }
-
+@media (width >=800px) {
   body {
-    font-size: 2em;
-  }
-
-  #bttop {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 }
 
-caption {
-  font-size: 1.5em;
-  color: rgb(188, 65, 145);
-  text-shadow: -2px -2px 0 mintcream, 2px -2px 0 mintcream, -2px 2px 0 mintcream, 2px 2px 0 mintcream;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-style: italic;
+/* ============================
+   Handbook Page Styling
+   ============================ */
+
+.handbook-page {
+  font-family: Georgia, serif;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #222;
+}
+
+
+
+/* Section Titles */
+.handbook-page h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #003366;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 5px;
+}
+
+/* Paragraphs */
+.handbook-page p {
+  margin-bottom: 15px;
+}
+
+/* Lists */
+.handbook-page ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.handbook-page li {
+  margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer li {
+  margin-bottom: 5px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .handbook-page {
+    padding: 15px;
+  }
+
+  .handbook-page h1 {
+    font-size: 1.6rem;
+  }
+
+  .handbook-page h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* ============================
+   Calendar Page Styling
+   ============================ */
+
+.calendar-page {
+  font-family: Georgia, serif;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #222;
+}
+
+.calendar-page h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #003366;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 5px;
+}
+
+.schedule ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+.schedule li {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  background: #f7f7f7;
+  border-left: 4px solid #003366;
+  border-radius: 4px;
+}
+
+.schedule li strong {
+  color: #003366;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer li {
+  margin-bottom: 5px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .calendar-page {
+    padding: 15px;
+  }
+
+  .calendar-page h1 {
+    font-size: 1.6rem;
+  }
+
+  .calendar-page h2 {
+    font-size: 1.2rem;
+  }
+
+  .schedule li {
+    padding: 10px;
+  }
+}
+
+/* ============================
+   Print Button
+   ============================ */
+
+.print-btn {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 10px 18px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.print-btn:hover {
+  background-color: #00264d;
+}
+
+/* ============================
+   Print-Friendly Layout
+   ============================ */
+
+@media print {
+
+  /* Hide navigation and menu toggle */
+  #sideMenu,
+  #menuToggle {
+    display: none !important;
+  }
+
+  /* Hide the print button itself */
+  .print-btn {
+    display: none !important;
+  }
+
+  /* Clean margins for printing */
+  body {
+    margin: 0;
+    padding: 20px;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  /* Make the schedule items print cleanly */
+  .schedule li {
+    background: none !important;
+    border: none !important;
+    padding: 4px 0 !important;
+    font-size: 12pt;
+  }
+
+  /* Remove page chrome */
+  header,
+  footer {
+    border: none;
+    box-shadow: none;
+  }
+
+  /* Ensure text prints dark and crisp */
+  * {
+    color: #000 !important;
+  }
+}
+
+/* ============================
+   Contact Page Styling
+   ============================ */
+
+.contact-page {
+  font-family: Georgia, serif;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #222;
+}
+
+.contact-section {
+  margin-bottom: 30px;
+}
+
+.contact-section h2 {
+  font-size: 1.4rem;
+  color: #003366;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.contact-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact-section li {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  background: #f7f7f7;
+  border-left: 4px solid #003366;
+  border-radius: 4px;
+}
+
+.contact-section li strong {
+  color: #003366;
+}
+
+.contact-section p {
+  background: #f7f7f7;
+  padding: 10px 12px;
+  border-left: 4px solid #003366;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-page {
+    padding: 15px;
+  }
+
+  .contact-page h1 {
+    font-size: 1.6rem;
+  }
+
+  .contact-section h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* ============================
+   Unified Header Layout
+   ============================ */
+
+/* Center block */
+.header-center {
+  text-align: center;
+}
+
+.header-tagline {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #5b3909;
+  /* soft warm white */
 }

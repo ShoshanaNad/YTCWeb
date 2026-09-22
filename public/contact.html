@@ -1,32 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../src/style.css">
+    <title>Contact Us</title>
 </head>
-<header>
-    <h1>Yeshivas Toras Chaim</h1>
-    <a href="aboutus.html" class="hplink">About Us | </a>
-    <a href="handbook.html" class="hplink">Handbook | </a>
-    <a href="calendar.html" class="hplink">Calendar | </a>
-    <a href="main.js" class="hplink">Home Page</a>
-</header>
-<body>
-    Yeshiva Directory
 
-    Rosh Hayeshiva/12th Grade Rebbi R' Boruch Gorelick: 216.269.2773
-    Rosh Mesivta/9th Grade Rebbi R' Elya Keller: 347.417.1336
-    Mashgiach R' Azriel Levin: 732.682.2093
-    10th Grade Rebbi R' Yechezkel Hertz: 323.243.0313
-    11th Grade Rebbi R' Pinchas Schwab: 347.546.1695
+<body class="contact-page">
 
-    Office
+    <header id="header">
+        <button id="menuToggle">☰ Menu</button>
     
-    Esther Udman: 216.644.5481
-    EUdman@yeshivastoraschaim.com
+        <div class="header-center">
+            <h1>Yeshivas Toras Chaim</h1>
+            <p class="header-tagline">A place for learning and growth.</p>
+        </div>
 
-    Bochurim phone numbers: 216.331.2454 | 216.331.4588
+        <nav id="sideMenu">
+            <a href="../index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="handbook.html">Handbook</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="calendar.html">Calendar</a>
+        </nav>
+    </header>
 
+    <main>
+        <h1>Yeshiva Directory</h1>
+
+        <section class="contact-section">
+            <h2>Rebbeim</h2>
+            <ul>
+                <li><strong>Rosh Hayeshiva / 12th Grade Rebbi — R' Boruch Gorelick:</strong> <a href="tel:2162692773">216.269.2773</a></li>
+                <li><strong>Rosh Mesivta / 9th Grade Rebbi — R' Elya Keller:</strong> <a href="tel:3474171336">347.417.1336</a></li>
+                <li><strong>Mashgiach — R' Azriel Levin:</strong> <a href="tel:7326822093">732.682.2093</a></li>
+                <li><strong>10th Grade Rebbi — R' Yechezkel Hertz:</strong> <a href="tel:3232430313">323.243.0313</a></li>
+                <li><strong>11th Grade Rebbi — R' Pinchas Schwab:</strong> <a href="tel:3475461695">347.546.1695</a></li>
+            </ul>
+        </section>
+
+        <section class="contact-section">
+            <h2>Office</h2>
+            <ul>
+                <li><strong>Esther Udman:</strong> <a href="tel:2166445481">216.644.5481</a></li>
+                <li><strong>Email:</strong> <a href="mailto:EUdman@yeshivastoraschaim.com">EUdman@yeshivastoraschaim.com</a></li>
+            </ul>
+        </section>
+
+        <section class="contact-section">
+            <h2>Bochurim Phone Numbers</h2>
+            <p> <a href="tel:2163312454">216.331.2454</a> | <a href="tel:2163314588">216.331.4588</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li>Address: 1975 Lyndway Rd, Lyndhurst, OH 44121</li>
+            <li>Email: office@YeshivasTtorasChaim.com</li>
+            <li>Phone: 216.242.1214</li>
+        </ul>
+        <p>&copy; 2022 Yeshivas Toras Chaim. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="../src/main.js"></script>
 </body>
+
 </html>

@@ -1,51 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calendar</title>
+    <link rel="stylesheet" href="../src/style.css">
 </head>
-<header>
-    <h1>Yeshivas Toras Chaim</h1>
-    <a href="aboutus.html" class="hplink">About Us | </a>
-    <a href="handbook.html" class="hplink">Handbook | </a>
-    <a href="main.js" class="hplink">Home Page | </a>
-    <a href="contact.html" class="hplink">Contact Us</a>
-</header>
-<body>
-    Daily Schedule
 
-    7:45 AM SHACHARIS
-    Halacha/Chumash followed by breakfast
+<body class="calendar-page">
 
-    9:45 AM FIRST SEDER
+    <header id="header">
+        <button id="menuToggle">☰ Menu</button>
+    
+        <div class="header-center">
+            <h1>Yeshivas Toras Chaim</h1>
+            <p class="header-tagline">A place for learning and growth.</p>
+        </div>
 
-    1:00 PM LUNCH
+        <nav id="sideMenu">
+            <a href="../index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="handbook.html">Handbook</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="calendar.html">Calendar</a>
+        </nav>
+    </header>
 
-    2:00 PM MINCHA
-    FOLLOWING MINCHA - 3:45 PM
-    SECOND SEDER
-    11th Grade until 4:25 PM
-    12th Grade until 5:30 PM
+    <main>
+        <h1>Daily Schedule</h1>
 
-    4:00 PM - 6:35 PM GENERAL EDUCATION
-    11th Grade 4:40-6:35 PM
-    12th Grade 6:00-6:35 PM
+        <section class="schedule">
+            <ul>
+                <li><strong>7:45 AM</strong> — Shacharis, Halacha/Chumash, Breakfast</li>
+                <li><strong>9:45 AM</strong> — First Seder</li>
+                <li><strong>1:00 PM</strong> — Lunch</li>
+                <li><strong>2:00 PM</strong> — Mincha</li>
+                <li><strong>Following Mincha – 3:45 PM</strong> — Second Seder</li>
+                <li><strong>11th Grade</strong> — until 4:25 PM</li>
+                <li><strong>12th Grade</strong> — until 5:30 PM</li>
+                <li><strong>4:00 PM – 6:35 PM</strong> — General Education</li>
+                <li><strong>11th Grade</strong> — 4:40–6:35 PM</li>
+                <li><strong>12th Grade</strong> — 6:00–6:35 PM</li>
+                <li><strong>6:35 PM – 7:05 PM</strong> — Supper</li>
+                <li><strong>7:05 PM – 7:40 PM</strong> — Bekius Shiur</li>
+                <li><strong>7:45 PM – 9:00 PM</strong> — Night Seder</li>
+                <li><strong>9:00 PM</strong> — Maariv</li>
+                <li><strong>Bekius Seder</strong> — until 10:30 PM (transportation at 10:00 & 10:30)</li>
+            </ul>
+        </section>
 
-    6:35 PM - 7:05 PM SUPPER
+        <h2>Calendar 2026–2027</h2>
+        <p>Please note: schedule is subject to change.</p>
 
-    7:05 PM - 7:40 PM BEKIUS SHIUR
+        <p><em>Calendar details will be added here. A table format is recommended for readability and printing. Hebrew
+                dates can be included.</em></p>
+    </main>
 
-    7:45 PM - 9:00 PM NIGHT SEDER
+    <button class="print-btn" onclick="window.print()">Print Schedule</button>
+    
+    <footer>
+        <ul>
+            <li>Address: 1975 Lyndway Rd, Lyndhurst, OH 44121</li>
+            <li>Email: office@YeshivasTtorasChaim.com</li>
+            <li>Phone: 216.242.1214</li>
+        </ul>
+        <p>&copy; 2022 Yeshivas Toras Chaim. All rights reserved.</p>
+    </footer>
 
-    9:00 PM MAARIV
-
-    11th and 12th Grade Bekius seder until 10:30. Additional Transportation will be provided at 10:00 and 10:30.
-
-    <br>
-    Calendar 2026-2027
-    Please note: schedule is subject to change
-
-    ADD IN CALENDAR DETAILS WITH HEBREW> MAYBE MAKE IT AS A TABLE SO THAT IT WILL BE EASIER TO READ AND PRINT OUT. CAN ALSO ADD IN THE HEBREW DATES FOR THE HOLIDAYS.
+    <script type="module" src="../src/main.js"></script>
 </body>
+
 </html>
