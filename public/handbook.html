@@ -12,22 +12,23 @@
 
     <header id="header">
         <button id="menuToggle">☰ Menu</button>
-    
+
         <div class="header-center">
             <h1>Yeshivas Toras Chaim</h1>
             <p class="header-tagline">A place for learning and growth.</p>
         </div>
-        
+
         <nav id="sideMenu">
             <a href="../index.html">Home</a>
             <a href="aboutus.html">About Us</a>
             <a href="handbook.html">Handbook</a>
             <a href="contact.html">Contact Us</a>
             <a href="calendar.html">Calendar</a>
+            <a href="donate.html">Donate</a>
         </nav>
     </header>
 
-    <main>
+    <main class="print-handbook">
         <h1>Yeshivas Toras Chaim Policies</h1>
 
         <section>
@@ -91,10 +92,25 @@
             </ul>
         </section>
 
-        <section>
-            <h2>Seforim List</h2>
-            <p>Need to write in — try to scan full list from handbook or request written page.</p>
+        <section class="page-break">
+            
+                <h2>Seforim List</h2>
+                <ul lang="he" dir="rtl" class="seforim-list">
+                    <li>מציעא בבא גמרא<span lang="en">(Please be sure it is not the abridged junior edition)</span></li>
+                    <li>קובץ מפרשים על מסכת בבא מציעא <span lang="en">(Recommended but not required)</span></li>
+                    <li>חמשה חומשי תורה</li>
+                    <li>(חלקים א׳ & ג׳) משנה ברורה<span lang="en">(11th and 12th Grade)</span></li>
+                    <li>ספר חפץ חיים<span lang="en">(9th Grade)</span></li>
+                    <li>מסילת ישרים<span lang="en">(9th Grade)</span></li>
+                    <li>ספר תומר דבורה<span lang="en">(9th Grade)</span></li>
+                    <li>ספר שערים בתפילה<span lang="en">(9th Grade)</span></li>
+                    <li>אדם חיי<span lang="en">(9th and 10th Grade)</span></li>
+                    <li>שערי תשובה<span lang="en">(10th Grade)</span></li>
+                    <li>שמירת הלשון<span lang="en">(11th Grade)</span></li>
+                </ul>
         </section>
+        <button class="print-btn" onclick="window.print()">Print Handbook</button>
+
     </main>
 
     <footer>

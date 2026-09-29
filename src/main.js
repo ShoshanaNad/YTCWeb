@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const header = document.getElementById("header");
 
-    // Only inject header on pages where header is empty (index.html)
     if (header && header.innerHTML.trim() === "") {
         header.innerHTML = `
             <button id="menuToggle">☰ Menu</button>
@@ -18,11 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 <a href="public/handbook.html">Handbook</a>
                 <a href="public/contact.html">Contact Us</a>
                 <a href="public/calendar.html">Calendar</a>
+                <a href="public/donate.html">Donate</a>
             </nav>
         `;
     }
 
-    // Attach toggle if menu exists
     const menu = document.getElementById("sideMenu");
     const toggle = document.getElementById("menuToggle");
 
@@ -30,7 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
         toggle.addEventListener("click", () => {
             menu.style.left = menu.style.left === "0px" ? "-260px" : "0px";
         });
+        window.addEventListener("scroll", () => {
+            if (menu.style.left === "0px") {
+                menu.style.left = "-260px";
+            }
+        });
+
     }
+
 
     const bottomImage = document.getElementById("bottom-image");
     if (bottomImage) {
@@ -61,4 +67,17 @@ document.addEventListener("DOMContentLoaded", () => {
             imageContainer.appendChild(imageElement);
         });
     }
+
+    const slides = document.querySelectorAll('.carousel img');
+    let index = 0;
+
+    function showSlide() {
+        slides.forEach(img => img.classList.remove('active'));
+        slides[index].classList.add('active');
+        index = (index + 1) % slides.length;
+    }
+
+    showSlide();
+    setInterval(showSlide, 3000); 
+
 });
