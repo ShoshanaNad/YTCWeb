@@ -41,18 +41,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const bottomImage = document.getElementById("bottom-image");
     if (bottomImage) {
         const img = document.createElement("img");
-        img.src = "src/images/YTCLogo.png"; // your footer image
+        img.src = "/src/images/YTCLogo.png"; 
         img.alt = "Yeshivas Toras Chaim";
         bottomImage.appendChild(img);
     }
 
-    const middleImage = document.getElementById("middle-image");
-    if (middleImage) {
-        const img = document.createElement("img");
-        img.src = "src/images/your-middle-image.png"; // replace later
-        img.alt = "Middle Image";
-        middleImage.appendChild(img);
-    }
 
     const imageContainer = document.getElementById("image-container");
     if (imageContainer) {
