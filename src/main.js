@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const bottomImage = document.getElementById("bottom-image");
     if (bottomImage) {
         const img = document.createElement("img");
-        img.src = "/src/images/YTCLogo.png"; 
+        img.src = "src/images/YTCLogo.png"; 
         img.alt = "Yeshivas Toras Chaim";
         bottomImage.appendChild(img);
     }
