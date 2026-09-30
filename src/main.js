@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <nav id="sideMenu">
                 <a href="index.html">Home</a>
-                <a href="public/aboutus.html">About Us</a>
-                <a href="public/handbook.html">Handbook</a>
-                <a href="public/contact.html">Contact Us</a>
-                <a href="public/calendar.html">Calendar</a>
-                <a href="public/donate.html">Donate</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="handbook.html">Handbook</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="calendar.html">Calendar</a>
+                <a href="donate.html">Donate</a>
             </nav>
         `;
     }
