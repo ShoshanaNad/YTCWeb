@@ -12,12 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
 
             <nav id="sideMenu">
-                <a href="index.html">Home</a>
-                <a href="aboutus.html">About Us</a>
-                <a href="handbook.html">Handbook</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="calendar.html">Calendar</a>
-                <a href="donate.html">Donate</a>
+                <a href="/index.html">Home</a>
+                <a href="/aboutus.html">About Us</a>
+                <a href="/handbook.html">Handbook</a>
+                <a href="/contact.html">Contact Us</a>
+                <a href="/calendar.html">Calendar</a>
+                <a href="/donate.html">Donate</a>
             </nav>
         `;
     }
