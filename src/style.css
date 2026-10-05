@@ -400,6 +400,19 @@ footer li {
   margin-bottom: 5px;
 }
 
+footer p a {
+  margin-left: 10px;
+}
+
+footer p a {
+  color: #666;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
   .handbook-page {
