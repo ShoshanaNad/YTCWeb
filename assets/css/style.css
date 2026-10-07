@@ -175,7 +175,7 @@ button {
   padding: 0;
   position: relative;
   min-height: 100vh;
-  background-image: url("../images/Dancing.jpeg");
+  background-image: url("../assets/images/Dancing.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
