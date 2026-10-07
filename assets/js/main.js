@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const bottomImage = document.getElementById("bottom-image");
     if (bottomImage) {
         const img = document.createElement("img");
-        img.src = "assets/images/YTCLogo.png"; 
+        img.src = "../assets/images/YTCLogo.png"; 
         img.alt = "Yeshivas Toras Chaim";
         bottomImage.appendChild(img);
     }
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageContainer = document.getElementById("image-container");
     if (imageContainer) {
         const images = [
-            { src: "assets/images/YTCLogo.png", alt: "5786-5787/2026-2027" }
+            { src: "../assets/images/YTCLogo.png", alt: "5786-5787/2026-2027" }
         ];
 
         images.forEach(img => {
