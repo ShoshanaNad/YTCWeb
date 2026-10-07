@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <nav id="sideMenu">
                 <a href="/index.html">Home</a>
-                <a href="/aboutus.html">About Us</a>
-                <a href="/handbook.html">Handbook</a>
-                <a href="/contact.html">Contact Us</a>
-                <a href="/calendar.html">Calendar</a>
-                <a href="/donate.html">Donate</a>
+                <a href="pages/aboutus.html">About Us</a>
+                <a href="pages/handbook.html">Handbook</a>
+                <a href="pages/contact.html">Contact Us</a>
+                <a href="pages/calendar.html">Calendar</a>
+                <a href="pages/donate.html">Donate</a>
             </nav>
         `;
     }
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const bottomImage = document.getElementById("bottom-image");
     if (bottomImage) {
         const img = document.createElement("img");
-        img.src = "src/images/YTCLogo.png"; 
+        img.src = "assets/images/YTCLogo.png"; 
         img.alt = "Yeshivas Toras Chaim";
         bottomImage.appendChild(img);
     }
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageContainer = document.getElementById("image-container");
     if (imageContainer) {
         const images = [
-            { src: "src/images/YTCLogo.png", alt: "5786-5787/2026-2027" }
+            { src: "assets/images/YTCLogo.png", alt: "5786-5787/2026-2027" }
         ];
 
         images.forEach(img => {
