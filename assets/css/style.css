@@ -575,7 +575,8 @@ footer li {
   }
 
   .page-break {
-    page-break-before: always;
+    page-break-before: always !important;
+    break-before: page !important;
   }
 
   .schedule li {
