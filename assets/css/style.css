@@ -564,6 +564,16 @@ footer li {
     display: block !important;
   }
 
+  .calendar-images img {
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .calendar-images img:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
   .page-break {
     page-break-before: always;
   }
