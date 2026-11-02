@@ -556,6 +556,7 @@ footer li {
   }
 
   .calendar-images img {
+    max-height: 85vh !important;
     width: 90% !important;
     max-width: 600px !important;
     box-shadow: none !important;
